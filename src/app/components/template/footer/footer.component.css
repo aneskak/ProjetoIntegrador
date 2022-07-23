@@ -171,3 +171,47 @@ ul li {
     height: 40px;
   }
 }
+
+@media (max-width: 400px) {
+  .tam-pagmto {
+    width: auto;
+    height: 25px;
+  }
+
+  .tam-ssl {
+    width: auto;
+    height: 45px;
+  }
+
+  .tam-h5 {
+    font-size: 15px;
+  }
+
+  .tam-p {
+    font-size: 12px;
+  }
+
+  .tam-rele {
+    width: auto;
+    height: 30px;
+  }
+
+  .tam-grupo6 {
+    width: auto;
+    height: 15px;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .tam-icon {
+    width: auto;
+    height: 25px !important;
+  }
+
+  .tam-i {
+    width: auto;
+    height: 40px;
+  }
+}
