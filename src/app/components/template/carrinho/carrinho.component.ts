@@ -20,7 +20,7 @@ export class CarrinhoComponent implements OnInit {
   listaLivros:  Array<Livros> = []
   
   soma = 0
-
+  qtdCarrinho = 0
   pedido: Pedido = new Pedido()
 
   cliente: Cliente = new Cliente()
@@ -92,6 +92,11 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
+  qtdCarrinhoo() {
+    if(this.listaLivros.length > 0) {
+      let qtdCarrinho = this.listaLivros.length
+    }
+  }
   removerLivro(livro: Livros){
     const index = this.listaLivros.indexOf(livro)
     this.listaLivros.splice(index, 1)

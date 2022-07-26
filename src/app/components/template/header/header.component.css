@@ -2,6 +2,7 @@
     background-image: url('../../../../assets/img/livros.png');
     background-repeat: no-repeat;
 }
+a {text-decoration: none;}
 
 .color {
     background-color: #000;
@@ -9,6 +10,12 @@
 
 .wid {
     width: 70vh;
+}
+.badge {
+    border-radius: 23px;
+    position: relative;
+    right: 6px;
+    bottom: 9px;
 }
 
 
