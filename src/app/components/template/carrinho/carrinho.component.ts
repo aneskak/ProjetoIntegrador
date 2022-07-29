@@ -20,7 +20,7 @@ export class CarrinhoComponent implements OnInit {
   listaLivros:  Array<Livros> = []
   
   soma = 0
-  qtdCarrinho = 0
+
   pedido: Pedido = new Pedido()
 
   cliente: Cliente = new Cliente()
@@ -34,10 +34,6 @@ export class CarrinhoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log("TAMANHO DO ENVIRONMENT CARRINHO: " + environment.carrinho)
-    console.log("TAMANHO DO LISTALIVROS: " + this.listaLivros.length)
-    console.log("TAMANHO DO CARRINHO NO PEDIDO: " + this.carrinho)
-
     this.carrinhoAtt()
     this.findClienteById(environment.id_cliente)
   }
@@ -92,11 +88,6 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
-  qtdCarrinhoo() {
-    if(this.listaLivros.length > 0) {
-      let qtdCarrinho = this.listaLivros.length
-    }
-  }
   removerLivro(livro: Livros){
     const index = this.listaLivros.indexOf(livro)
     this.listaLivros.splice(index, 1)

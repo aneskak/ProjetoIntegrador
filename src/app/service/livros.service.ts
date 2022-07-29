@@ -18,32 +18,31 @@ export class LivrosService {
   }
 
   getAllLivros():Observable<Livros[]> {
-    return this.http.get<Livros[]>('http://localhost:8080/livros/listartodos')
+    return this.http.get<Livros[]>('https://releiame.herokuapp.com/livros/listartodos')
 
   }
 
   getLivrosById(id_livros: number):Observable<Livros>{
-    return this.http.get<Livros>(`http://localhost:8080/livros/${id_livros}`)
+    return this.http.get<Livros>(`https://releiame.herokuapp.com/livros/${id_livros}`)
   }
 
   getByTitulo(titulo: string): Observable<Livros[]>{
-    return this.http.get<Livros[]>(`http://localhost:8080/livros/titulo/${titulo}`)
+    return this.http.get<Livros[]>(`https://releiame.herokuapp.com/livros/titulo/${titulo}`)
   }
 
   cadastrar(livros:Livros):Observable<Livros>{
-    console.log('Chegou no método o service')
-    return this.http.post<Livros>('http://localhost:8080/livros/cadastrar', livros, this.token)
+    return this.http.post<Livros>('https://releiame.herokuapp.com/livros/cadastrar', livros, this.token)
   }
 
   put(livros: Livros):Observable<Livros>{
-    return this.http.put<Livros>('http://localhost:8080/livros/atualizar', livros, this.token)
+    return this.http.put<Livros>('https://releiame.herokuapp.com/livros/atualizar', livros, this.token)
   }
 
   deleteLivros(id_livros: number){
-    return this.http.delete(`http://localhost:8080/livros/${id_livros}`, this.token)
+    return this.http.delete(`https://releiame.herokuapp.com/livros/${id_livros}`, this.token)
   }
 
   putLivros(id_livros: number, id_pedido: number){
-    return this.http.put<Livros>(`http://localhost:8080/livros/livro_pedido/livros/${id_livros}/pedido/${id_pedido}`, this.token)
+    return this.http.put<Livros>(`https://releiame.herokuapp.com/livros/livro_pedido/livros/${id_livros}/pedido/${id_pedido}`, this.token)
   }
 }
